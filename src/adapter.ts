@@ -69,8 +69,6 @@ export class MetaMaskAdapter extends Adapter {
         // Attempt to get MetaMask provider immediately
         const provider = getMetaMaskProvider();
 
-        console.log(provider)
-
         if (provider) {
             this.readyState = WalletReadyState.Found;
             this.listenEvents(provider);
@@ -81,7 +79,7 @@ export class MetaMaskAdapter extends Adapter {
                 if (res) {
                     this.readyState = WalletReadyState.Found;
                     this.listenEvents(res);
-                    // this.autoConnect(res);
+                    this.autoConnect(res);
                 } else {
                     this.readyState = WalletReadyState.NotFound;
                 }
@@ -106,15 +104,12 @@ export class MetaMaskAdapter extends Adapter {
 
         const provider = await this.getProvider();
 
-        console.log("getProvider ----------------->",provider)
         if (!provider) throw new WalletNotFoundError();
 
         // Prompt user to connect their wallet
         const accounts = await provider.request<undefined, string[]>({
             method: 'eth_requestAccounts'
         });
-
-        console.log("accounts ----------------->",accounts)
 
         if (!accounts.length) {
             throw new WalletConnectionError("No accounts are available.");
@@ -230,8 +225,7 @@ export class MetaMaskAdapter extends Adapter {
         const accounts = await provider.request<undefined, string[]>({
             method: 'eth_accounts'
         });
-
-        console.log("autoConnect - accounts",accounts)
+        
         this.address = accounts?.[0] || null;
 
         if (this.address) {
