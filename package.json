@@ -5,7 +5,7 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "prepare": "pnpm build"
+    "prepare": "pnpm install && pnpm build"
   },
   "keywords": [],
   "author": "",

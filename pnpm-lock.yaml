@@ -13,7 +13,7 @@ importers:
         version: https://codeload.github.com/pv-saurav/hadron-abstract-adapter/tar.gz/37d1d0bce9376ea72b6a616e1334792d0accbc62
       '@hadron/abstract-adapter-evm':
         specifier: github:pv-saurav/hadron-abstract-adapter-evm
-        version: https://codeload.github.com/pv-saurav/hadron-abstract-adapter-evm/tar.gz/2065294bc94623978fc6d0e0e4289d2fa3b35695
+        version: https://codeload.github.com/pv-saurav/hadron-abstract-adapter-evm/tar.gz/45a6da7575f409dd3879a7e78db8a1fddd3f6bd4
       eventemitter3:
         specifier: ^5.0.1
         version: 5.0.1
@@ -27,8 +27,8 @@ importers:
 
 packages:
 
-  '@hadron/abstract-adapter-evm@https://codeload.github.com/pv-saurav/hadron-abstract-adapter-evm/tar.gz/2065294bc94623978fc6d0e0e4289d2fa3b35695':
-    resolution: {tarball: https://codeload.github.com/pv-saurav/hadron-abstract-adapter-evm/tar.gz/2065294bc94623978fc6d0e0e4289d2fa3b35695}
+  '@hadron/abstract-adapter-evm@https://codeload.github.com/pv-saurav/hadron-abstract-adapter-evm/tar.gz/45a6da7575f409dd3879a7e78db8a1fddd3f6bd4':
+    resolution: {tarball: https://codeload.github.com/pv-saurav/hadron-abstract-adapter-evm/tar.gz/45a6da7575f409dd3879a7e78db8a1fddd3f6bd4}
     version: 1.0.0
 
   '@hadron/abstract-adapter@https://codeload.github.com/pv-saurav/hadron-abstract-adapter/tar.gz/37d1d0bce9376ea72b6a616e1334792d0accbc62':
@@ -51,7 +51,7 @@ packages:
 
 snapshots:
 
-  '@hadron/abstract-adapter-evm@https://codeload.github.com/pv-saurav/hadron-abstract-adapter-evm/tar.gz/2065294bc94623978fc6d0e0e4289d2fa3b35695':
+  '@hadron/abstract-adapter-evm@https://codeload.github.com/pv-saurav/hadron-abstract-adapter-evm/tar.gz/45a6da7575f409dd3879a7e78db8a1fddd3f6bd4':
     dependencies:
       eventemitter3: 5.0.1
 
