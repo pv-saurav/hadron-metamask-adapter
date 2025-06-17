@@ -69,17 +69,19 @@ export class MetaMaskAdapter extends Adapter {
         // Attempt to get MetaMask provider immediately
         const provider = getMetaMaskProvider();
 
+        console.log(provider)
+
         if (provider) {
             this.readyState = WalletReadyState.Found;
             this.listenEvents(provider);
-            this.autoConnect(provider);
+            // this.autoConnect(provider);
         } else {
             // If not found, wait for provider to initialize
             this.getProvider().then((res) => {
                 if (res) {
                     this.readyState = WalletReadyState.Found;
                     this.listenEvents(res);
-                    this.autoConnect(res);
+                    // this.autoConnect(res);
                 } else {
                     this.readyState = WalletReadyState.NotFound;
                 }
@@ -224,6 +226,8 @@ export class MetaMaskAdapter extends Adapter {
         const accounts = await provider.request<undefined, string[]>({
             method: 'eth_accounts'
         });
+
+        console.log("autoConnect - accounts",accounts)
         this.address = accounts?.[0] || null;
 
         if (this.address) {
