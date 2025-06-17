@@ -1,0 +1,23 @@
+{
+  "name": "@hadron/metamask-adapter",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "pnpm build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.5.2",
+  "devDependencies": {
+    "@types/node": "^24.0.1",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@hadron/abstract-adapter": "github:pv-saurav/hadron-abstract-adapter",
+    "@hadron/abstract-adapter-evm": "github:pv-saurav/hadron-abstract-adapter-evm",
+    "eventemitter3": "^5.0.1"
+  }
+}
