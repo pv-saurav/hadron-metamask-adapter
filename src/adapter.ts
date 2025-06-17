@@ -105,12 +105,16 @@ export class MetaMaskAdapter extends Adapter {
         this.connecting = true;
 
         const provider = await this.getProvider();
+
+        console.log("getProvider ----------------->",provider)
         if (!provider) throw new WalletNotFoundError();
 
         // Prompt user to connect their wallet
         const accounts = await provider.request<undefined, string[]>({
             method: 'eth_requestAccounts'
         });
+
+        console.log("accounts ----------------->",accounts)
 
         if (!accounts.length) {
             throw new WalletConnectionError("No accounts are available.");
